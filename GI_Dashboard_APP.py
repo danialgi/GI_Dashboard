@@ -77,7 +77,7 @@ data_file2 = pd.read_excel('RENAMED ATZ Daily.xlsx')
 ##st.dataframe(df_filtered)
 
 st.title("✍ Receiving")
-df1s = df1.groupby('user_name').sum()
+df1s = df1.groupby('user_name').sum(numeric_only=True)
 containerA = st.container()
 chart1, chart2 = containerA.columns(2)
 with chart1:
@@ -115,7 +115,7 @@ with chart2:
 
 st.title("📦 Putaway")
 df2=df2[(df2['user_name'].str.contains('Ko Latt')) | (df2['user_name'].str.contains('Thaw Zin Oo')) | (df2['user_name'].str.contains('MR LOW')) | (df2['user_name'].str.contains('Nyi Nyi')) | (df2['user_name'].str.contains('THAT TI TUN')) | (df2['user_name'].str.contains('BoBO')) | (df2['user_name'].str.contains('Than Naing'))]
-df2s = df2.groupby('user_name').sum()
+df2s = df2.groupby('user_name').sum(numeric_only=True)
 containerB = st.container()
 chart3, chart4 = containerB.columns(2)
 with chart3:
@@ -154,7 +154,7 @@ with chart4:
 
 st.title("🧺 Picking")
 df3=df3[(df3['user_name'].str.contains('PAPA')) | (df3['user_name'].str.contains('SAN SAN MAW')) | (df3['user_name'].str.contains('Wai Mar Lwin')) | (df3['user_name'].str.contains('Htet Htet Aung')) | (df3['user_name'].str.contains('Thae Mon Thu')) | (df3['user_name'].str.contains('Wine Wine Lail')) | (df3['user_name'].str.contains('Tun Win Sein')) | (df3['user_name'].str.contains('Myo Myat Thu'))]
-df3s = df3.groupby('user_name').sum()
+df3s = df3.groupby('user_name').sum(numeric_only=True)
 containerC = st.container()
 chart5, chart6 = containerC.columns(2)
 with chart5:
@@ -195,7 +195,7 @@ with chart6:
 
 st.title("📥 Sorting")
 df4=df4[(df4['user_name'].str.contains('Aye Thida Aung')) | (df4['user_name'].str.contains('HLA HLA WIN')) | (df4['user_name'].str.contains('Phyu Htwe Tun')) | (df4['user_name'].str.contains('MALISSA')) | (df4['user_name'].str.contains('MIN OO')) | (df4['user_name'].str.contains('Wine Wine Lail'))]
-df4s = df4.groupby('user_name').sum()
+df4s = df4.groupby('user_name').sum(numeric_only=True)
 containerD = st.container()
 chart7, chart8 = containerD.columns(2)
 with chart7:
@@ -236,7 +236,7 @@ with chart8:
 
 st.title("🎁 Packing")
 df5=df5[(df5['user_name'].str.contains('Mu Mu Lwin')) | (df5['user_name'].str.contains('Myo Ma')) | (df5['user_name'].str.contains('Shwe Win')) | (df5['user_name'].str.contains('Nyi Nyi')) | (df5['user_name'].str.contains('Maung Oo')) | (df5['user_name'].str.contains('Aung Soe Lin')) | (df5['user_name'].str.contains('Win Than Htay'))]
-df5s = df5.groupby('user_name').sum()
+df5s = df5.groupby('user_name').sum(numeric_only=True)
 containerE = st.container()
 chart9, chart10 = containerE.columns(2)
 with chart9:
@@ -274,7 +274,7 @@ with chart10:
     st.plotly_chart(fig, use_container_width=True)
 
 st.title("🚛 Loading")
-df6s = df6.groupby('user_name').sum()
+df6s = df6.groupby('user_name').sum(numeric_only=True)
 containerF = st.container()
 chart11, chart12 = containerF.columns(2)
 with chart11:
@@ -310,3 +310,4 @@ with chart12:
     )
     fig.update_traces(textposition="top center")
     st.plotly_chart(fig, use_container_width=True)
+
