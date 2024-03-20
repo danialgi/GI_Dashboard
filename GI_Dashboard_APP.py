@@ -9,7 +9,9 @@ from plotly.subplots import make_subplots
 
 st.set_page_config(page_title="Dashboard", page_icon=":bar_chart:", layout="wide")
 
-st.title("🚚 Genuine Inside (M) Sdn. Bhd.")
+st.title("Hi, NurElisya Haslinda 👧🏻")
+st.header("Im Watching you 👁️")
+#st.title("🚚 Genuine Inside (M) Sdn. Bhd.")
 st.markdown("##")
 
 df1 = pd.read_excel("Example Dataset.xlsx",sheet_name="Receiving")
