@@ -14,7 +14,7 @@ st.markdown("##")
 
 # ---- FILE UPLOAD ----
 st.header("File Upload")
-data_file = st.file_uploader("Upload Excel file",type=['xlsx'])
+data_file =  pd.read_excel('SAMPLE DATA.xlsx')
 
 df1 = pd.read_excel(data_file,sheet_name="Receiving")
 df2 = pd.read_excel(data_file,sheet_name="Putaway")
