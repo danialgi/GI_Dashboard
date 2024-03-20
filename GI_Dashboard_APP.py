@@ -26,7 +26,7 @@ df4.rename(columns = {'date (D/M/Y)':'tarikh'}, inplace = True)
 df5.rename(columns = {'date (D/M/Y)':'tarikh'}, inplace = True)
 df6.rename(columns = {'date (D/M/Y)':'tarikh'}, inplace = True)
 
-with pd.ExcelWriter('RENAMED ATZ Daily.xlsx') as writer:
+with pd.ExcelWriter('RENAMED Dataset.xlsx') as writer:
     df1.to_excel(writer, sheet_name='Receiving', index = False)
     df2.to_excel(writer, sheet_name='Putaway', index = False)
     df3.to_excel(writer, sheet_name='Batch Picking', index = False)
@@ -34,7 +34,7 @@ with pd.ExcelWriter('RENAMED ATZ Daily.xlsx') as writer:
     df5.to_excel(writer, sheet_name='Packing', index = False)
     df6.to_excel(writer, sheet_name='Loading', index = False)
 
-data_file2 = pd.read_excel('RENAMED ATZ Daily.xlsx')
+data_file2 = pd.read_excel('RENAMED Dataset.xlsx')
 #fileloc(r"C:\...\...")
 
 # ---- Select sheet ----
