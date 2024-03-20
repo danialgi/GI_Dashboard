@@ -18,11 +18,11 @@ data_file = pd.read_excel("Example Dataset.xlsx")
 data_file
 
 df1 = pd.read_excel("Example Dataset.xlsx",sheet_name="Receiving")
-df2 = pd.read_excel(data_file,sheet_name="Putaway")
-df3 = pd.read_excel(data_file,sheet_name="Batch Picking")
-df4 = pd.read_excel(data_file,sheet_name="Sorting")
-df5 = pd.read_excel(data_file,sheet_name="Packing")
-df6 = pd.read_excel(data_file,sheet_name="Loading")
+df2 = pd.read_excel("Example Dataset.xlsx",sheet_name="Putaway")
+df3 = pd.read_excel("Example Dataset.xlsx",sheet_name="Batch Picking")
+df4 = pd.read_excel("Example Dataset.xlsx",sheet_name="Sorting")
+df5 = pd.read_excel("Example Dataset.xlsx",sheet_name="Packing")
+df6 = pd.read_excel("Example Dataset.xlsx",sheet_name="Loading")
 
 df1.rename(columns = {'date (D/M/Y)':'tarikh'}, inplace = True)
 df2.rename(columns = {'date (D/M/Y)':'tarikh'}, inplace = True)
