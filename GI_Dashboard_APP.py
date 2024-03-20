@@ -12,11 +12,6 @@ st.set_page_config(page_title="Dashboard", page_icon=":bar_chart:", layout="wide
 st.title("🚚 Genuine Inside (M) Sdn. Bhd.")
 st.markdown("##")
 
-# ---- FILE UPLOAD ----
-st.header("File Upload")
-data_file = pd.read_excel("Example Dataset.xlsx")
-data_file
-
 df1 = pd.read_excel("Example Dataset.xlsx",sheet_name="Receiving")
 df2 = pd.read_excel("Example Dataset.xlsx",sheet_name="Putaway")
 df3 = pd.read_excel("Example Dataset.xlsx",sheet_name="Batch Picking")
